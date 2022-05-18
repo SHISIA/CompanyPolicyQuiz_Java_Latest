@@ -1,0 +1,110 @@
+QuestionNumber
+Topic
+SubTopic
+Question
+AnswerA
+AnswerB
+AnswerC
+AnswerD
+AnswerE
+Correct Answer
+11
+OHS
+Working at Heights
+When looking to work at heights, I need to review:
+Our Company's SOP - Working at Heights
+Our Company's Privacy Policy
+Our Chemical Safety Data Sheets
+Our Company's Copyright Policy
+Our Company's Purchasing Policy
+1
+12
+Copyright
+Client Copyright Materials
+With copyright material from our client:
+Only store in hard copy in a locked filing cabinet
+Store such materials only on our secured network
+Obfuscate it so as to make it difficult to interpret
+Restrict viewing to only admin staff
+Forward to other developers via email
+2
+13
+Privacy
+Staff Details
+Personal staff details:
+Should never be viewed by any staff at any level
+Can only be viewed by Human Resourses staff
+Need to be managed in our company's secured database system
+Should only ever be emailed
+Should only be stored in hard copy in locked filing cabinets
+3
+41
+OHS
+Hazards
+In the event you notice a potential hazard:
+Note it for later consideration
+Report it immediately to an OHS officer
+Fill out a Safety Data Sheet
+Add it to our Company's Purchasing Policy
+Create a new SOP (Safe Operating Procedure)
+2
+42
+Copyright
+Purchasing Copyright Material
+When purchasing copyright material from a third party source:
+Request copyright ownership where appropriate and feasible to do so
+Only purchase material where we can hold the copyright
+Only purchase material where our clients can hold the copyright
+Retain a copy of the privacy statement attached to the material purchased
+Create a new purchasing policy specific to that purchase
+1
+56
+OHS
+Incidents
+Should you be involved in or be witness to an OHS-related incident, you should:
+Note it for later consideration
+Fill out a Safety Data Sheet
+Add it to our Company's Purchasing Policy
+Report it immediately to an OHS or security officer
+Create a new SOP (Safe Operating Procedure)
+4
+71
+Copyright
+Internal Copyright Materials
+With our organisation's copyright material:
+Obfuscate it so as to make it difficult to interpret
+Restrict viewing to only admin staff
+Only store in hard copy in a locked filing cabinet
+Store such materials only on our secured network
+Forward to other developers via email
+4
+72
+OHS
+Confined Space Work
+When looking to work in a confined space, I need to review:
+Our company's SOP - Working at Heights
+Our company's SOP - Vehicle Parking
+Our Chemical Safety Data Sheets
+Our Company's Copyright Policy
+Our company's SOP - Working in a Confined Space
+5
+82
+Privacy
+Client Details
+With Commercial in Confidence Client Details, we are required to:
+Store such details only on our secured network
+Only store in hard copy in a locked filing cabinet
+Obfuscate it so as to make it difficult to interpret
+Can only be viewed by admin staff
+Can be left unsecured
+1
+87
+OHS
+First Aid Kit
+In relation to the First Aid Kits in the various departments:
+Leave them wherever last used
+Place them above the stovetops in the department kitchens
+Ensure they are kept appropriately stocked
+Only display appropriate signage when directed to do so
+Fill out a Safety Data Sheet with each use
+3
