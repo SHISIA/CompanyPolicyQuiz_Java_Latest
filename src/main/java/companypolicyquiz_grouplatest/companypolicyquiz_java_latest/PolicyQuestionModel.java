@@ -4,182 +4,169 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
 
 public class PolicyQuestionModel {
 
-    private IntegerProperty policyQuestionNumber;
-    //private StringProperty policyQuestionNumber;
-    private StringProperty policyTopic;
-    private StringProperty policySubTopic;
-
-    private StringProperty policyQuestionText;
-    private StringProperty answerOptionA;
-    private StringProperty answerOptionB;
-    private StringProperty answerOptionC;
-    private StringProperty answerOptionD;
-    private StringProperty answerOptionE;
-    private IntegerProperty correctAnswer;
-
+    private IntegerProperty policyQuestionNumberProp;
+    private StringProperty policyTopicProp;
+    private StringProperty policySubTopicProp;
+    private StringProperty policyQuestionTextProp;
+    private StringProperty answerOptionAProp;
+    private StringProperty answerOptionBProp;
+    private StringProperty answerOptionCProp;
+    private StringProperty answerOptionDProp;
+    private StringProperty answerOptionEProp;
+    private IntegerProperty correctAnswerProp;
 
     public PolicyQuestionModel() {
-        /*
-        this.setPolicyQuestionNumber(1);
-        this.setPolicyTopic("");
-        this.setPolicySubTopic("");
-        this.setPolicyQuestionText("");
-        this.setAnswerOptionA("");
-        this.setAnswerOptionB("");
-        this.setAnswerOptionC("");
-        this.setAnswerOptionD("");
-        this.setAnswerOptionE("");
-        this.setCorrectAnswer(1);
-         */
+        this(1, "", "");
     }
 
-    public PolicyQuestionModel(int policyQuestionNumber, String policyTopic, String policySubTopic, String policyQuestionText,
-        String answerOptionA, String answerOptionB, String answerOptionC, String answerOptionD, String answerOptionE, int correctAnswer)
-    {
-        this.policyQuestionNumber = new SimpleIntegerProperty(policyQuestionNumber);
-        //this.policyQuestionNumber = new SimpleStringProperty(policyQuestionNumber);
-        this.policyTopic = new SimpleStringProperty(policyTopic);
-        this.policySubTopic = new SimpleStringProperty(policySubTopic);
-        this.policyQuestionText = new SimpleStringProperty(policyQuestionText);
-        this.answerOptionA = new SimpleStringProperty(answerOptionA);
-        this.answerOptionB = new SimpleStringProperty(answerOptionB);
-        this.answerOptionC = new SimpleStringProperty(answerOptionC);
-        this.answerOptionD = new SimpleStringProperty(answerOptionD);
-        this.answerOptionE = new SimpleStringProperty(answerOptionE);
-        this.correctAnswer = new SimpleIntegerProperty(correctAnswer);
+    public PolicyQuestionModel(int policyQuestionNumber, String policyTopic, String policySubTopic) {
+        this(policyQuestionNumber, policyTopic, policySubTopic, "", "", "", "", "", "", 1);
+    }
+
+    public PolicyQuestionModel(
+            int policyQuestionNumber,
+            String policyTopic,
+            String policySubTopic,
+            String policyQuestionText,
+            String answerOptionA,
+            String answerOptionB,
+            String answerOptionC,
+            String answerOptionD,
+            String answerOptionE,
+            int correctAnswer) {
+        policyQuestionNumberProp = new SimpleIntegerProperty(policyQuestionNumber);
+        policyTopicProp = new SimpleStringProperty(policyTopic);
+        policySubTopicProp = new SimpleStringProperty(policySubTopic);
+        policyQuestionTextProp = new SimpleStringProperty(policyQuestionText);
+        answerOptionAProp = new SimpleStringProperty(answerOptionA);
+        answerOptionBProp = new SimpleStringProperty(answerOptionB);
+        answerOptionCProp = new SimpleStringProperty(answerOptionC);
+        answerOptionDProp = new SimpleStringProperty(answerOptionD);
+        answerOptionEProp = new SimpleStringProperty(answerOptionE);
+        correctAnswerProp = new SimpleIntegerProperty(correctAnswer);
     }
 
     public int getPolicyQuestionNumber() {
-        return policyQuestionNumber.get();
+        return policyQuestionNumberProp.get();
+    }
+
+    public void setPolicyQuestionNumber(int policyQuestionNumber) {
+        this.policyQuestionNumberProp.set(policyQuestionNumber);
     }
 
     public IntegerProperty policyQuestionNumberProperty() {
-        return policyQuestionNumber;
-    }
-
-    // This way works otherwise get null errors
-    public void setPolicyQuestionNumber(int policyQuestionNumber) {
-            this.policyQuestionNumber = new SimpleIntegerProperty(policyQuestionNumber);
+        return policyQuestionNumberProp;
     }
 
     public String getPolicyTopic() {
-        return policyTopic.get();
-    }
-
-    public StringProperty policyTopicProperty() {
-        return policyTopic;
+        return policyTopicProp.get();
     }
 
     public void setPolicyTopic(String policyTopic) {
-        this.policyTopic = new SimpleStringProperty(policyTopic);
+        this.policyTopicProp.set(policyTopic);
+    }
+
+    public StringProperty policyTopicProperty() {
+        return policyTopicProp;
     }
 
     public String getPolicySubTopic() {
-        return policySubTopic.get();
-    }
-
-    public StringProperty policySubTopicProperty() {
-        return policySubTopic;
+        return policySubTopicProp.get();
     }
 
     public void setPolicySubTopic(String policySubTopic) {
-        this.policySubTopic = new SimpleStringProperty(policySubTopic);
+        this.policySubTopicProp.set(policySubTopic);
+    }
+
+    public StringProperty policySubTopicProperty() {
+        return policySubTopicProp;
     }
 
     public String getPolicyQuestionText() {
-        return policyQuestionText.get();
-    }
-
-    public StringProperty policyQuestionTextProperty() {
-        return policyQuestionText;
+        return policyQuestionTextProp.get();
     }
 
     public void setPolicyQuestionText(String policyQuestionText) {
-        this.policyQuestionText = new SimpleStringProperty(policyQuestionText);
+        this.policyQuestionTextProp.set(policyQuestionText);
+    }
+
+    public StringProperty policyQuestionTextProperty() {
+        return policyQuestionTextProp;
     }
 
     public String getAnswerOptionA() {
-        return answerOptionA.get();
-    }
-
-    public StringProperty answerOptionAProperty() {
-        return answerOptionA;
+        return answerOptionAProp.get();
     }
 
     public void setAnswerOptionA(String answerOptionA) {
-        this.answerOptionA = new SimpleStringProperty(answerOptionA);
+        this.answerOptionAProp.set(answerOptionA);
+    }
+
+    public StringProperty answerOptionAProperty() {
+        return answerOptionAProp;
     }
 
     public String getAnswerOptionB() {
-        return answerOptionB.get();
-    }
-
-    public StringProperty answerOptionBProperty() {
-        return answerOptionB;
+        return answerOptionBProp.get();
     }
 
     public void setAnswerOptionB(String answerOptionB) {
-        this.answerOptionB = new SimpleStringProperty(answerOptionB);
+        this.answerOptionBProp.set(answerOptionB);
+    }
+
+    public StringProperty answerOptionBProperty() {
+        return answerOptionBProp;
     }
 
     public String getAnswerOptionC() {
-        return answerOptionC.get();
-    }
-
-    public StringProperty answerOptionCProperty() {
-        return answerOptionC;
+        return answerOptionCProp.get();
     }
 
     public void setAnswerOptionC(String answerOptionC) {
-        this.answerOptionC = new SimpleStringProperty(answerOptionC);
+        this.answerOptionCProp.set(answerOptionC);
+    }
+
+    public StringProperty answerOptionCProperty() {
+        return answerOptionCProp;
     }
 
     public String getAnswerOptionD() {
-        return answerOptionD.get();
-    }
-
-    public StringProperty answerOptionDProperty() {
-        return answerOptionD;
+        return answerOptionDProp.get();
     }
 
     public void setAnswerOptionD(String answerOptionD) {
-        this.answerOptionD = new SimpleStringProperty(answerOptionD);
+        this.answerOptionDProp.set(answerOptionD);
+    }
+
+    public StringProperty answerOptionDProperty() {
+        return answerOptionDProp;
     }
 
     public String getAnswerOptionE() {
-        return answerOptionE.get();
-    }
-
-    public StringProperty answerOptionEProperty() {
-        return answerOptionE;
+        return answerOptionEProp.get();
     }
 
     public void setAnswerOptionE(String answerOptionE) {
-        this.answerOptionE = new SimpleStringProperty(answerOptionE);
+        this.answerOptionEProp.set(answerOptionE);
+    }
+
+    public StringProperty answerOptionEProperty() {
+        return answerOptionEProp;
     }
 
     public int getCorrectAnswer() {
-        return correctAnswer.get();
-    }
-
-    public IntegerProperty correctAnswerProperty() {
-        return correctAnswer;
+        return correctAnswerProp.get();
     }
 
     public void setCorrectAnswer(int correctAnswer) {
-        this.correctAnswer = new SimpleIntegerProperty(correctAnswer);
+        this.correctAnswerProp.set(correctAnswer);
     }
 
-    public PolicyQuestionModel(int policyQuestionNumber, String policyTopic, String policySubTopic)
-    //public PolicyQuestionModel(String policyQuestionNumber, String policyTopic, String policySubTopic)
-    {
-        this.policyQuestionNumber = new SimpleIntegerProperty(policyQuestionNumber);
-        this.policyTopic = new SimpleStringProperty(policyTopic);
-        this.policySubTopic = new SimpleStringProperty(policySubTopic);
+    public IntegerProperty correctAnswerProperty() {
+        return correctAnswerProp;
     }
+
 }
