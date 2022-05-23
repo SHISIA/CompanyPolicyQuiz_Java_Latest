@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VboxMain" alignment="CENTER" onMouseClicked="#handleClickAction" onMouseDragged="#handleMovementAction" prefHeight="998.0" prefWidth="956.0" spacing="20.0" style="-fx-background-color: #163864;" stylesheets="@App.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="company.policy.client.manager.QuizViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="958.0" prefWidth="914.0" style="-fx-background-color: #163864;">
+         <children>
+            <AnchorPane fx:id="" layoutX="-20.0" layoutY="-20.0" prefHeight="999.0" prefWidth="960.0" style="-fx-background-color: #163864;">
+               <children>
+                  <HBox layoutX="-11.0" prefHeight="91.0" prefWidth="970.0" style="-fx-background-color: #2C64B6;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="986.0" style="-fx-font-size: 2.5em;" text="Perfect Policy Quiz" textAlignment="JUSTIFY" />
+                     </children>
+                  </HBox>
+                  <Pane layoutX="25.0" layoutY="112.0" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #2C64B6;">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="25.0" prefWidth="109.0" text="Search Topic:">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="-7.0" layoutY="-97.0" prefHeight="63.0" prefWidth="280.0" />
+                     </children>
+                  </Pane>
+                  <TextField fx:id="txtSearchField" layoutX="163.0" layoutY="112.0" prefHeight="34.0" prefWidth="200.0" promptText="Type Your Search Here" />
+                  <ScrollPane layoutX="25.0" layoutY="164.0" prefHeight="358.0" prefWidth="499.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="358.0" prefWidth="499.0">
+                           <children>
+                              <Label alignment="CENTER" layoutY="-1.0" prefHeight="27.0" prefWidth="499.0" style="-fx-background-color: #2C64B6;" text="Policy Questions" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableVeiw" editable="true" layoutY="26.0" onMouseClicked="#onTableRowClick" prefHeight="318.0" prefWidth="486.0">
+                                 <columns>
+                                    <TableColumn fx:id="questionNumberColumn" prefWidth="75.0" text="#" />
+                                    <TableColumn fx:id="topicColumn" prefWidth="125.60009765625" text="Topic" />
+                                    <TableColumn fx:id="subTopicColumn" prefWidth="282.3999328613281" text="Sub Topic" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="531.0" prefHeight="40.0" prefWidth="74.0" style="-fx-background-color: #00569C;" text="Sort by:">
+                     <font>
+                        <Font name="Source Serif Pro" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnQuestionNumberSort" layoutX="111.0" layoutY="532.0" mnemonicParsing="false" onAction="#buttonQN_Sort" prefHeight="40.0" prefWidth="74.0" style="-fx-background-color: #2C64B6;" text="Qn#">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnTopicSort" layoutX="197.0" layoutY="532.0" mnemonicParsing="false" onAction="#buttonInsertion_Sort" prefHeight="40.0" prefWidth="68.0" style="-fx-background-color: #2C64B6;" text="Topic" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSubTopicSort" layoutX="275.0" layoutY="532.0" mnemonicParsing="false" onAction="#btnSelectionSort" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #2C64B6;" text="Sub Topic" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnConnect" layoutX="275.0" layoutY="585.0" mnemonicParsing="false" onAction="#buttonConnectFunction" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #2C64B6;" text="Connect" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSend" disable="true" layoutX="798.0" layoutY="585.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #2C64B6;" text="Send" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtCorrectAnswer" layoutX="686.0" layoutY="585.0" prefHeight="40.0" prefWidth="102.0" />
+                  <Label alignment="CENTER" layoutX="538.0" layoutY="585.0" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: #00569C;" text="Correct Answer:">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="538.0" layoutY="112.0" prefHeight="458.0" prefWidth="391.0">
+                     <children>
+                        <Pane prefHeight="458.0" prefWidth="391.0" style="-fx-background-color: #2C64B6;" />
+                        <Pane layoutX="6.0" layoutY="5.0" prefHeight="447.0" prefWidth="380.0" style="-fx-background-color: #163864;">
+                           <children>
+                              <Label depthTest="DISABLE" layoutX="6.0" layoutY="53.0" prefHeight="25.0" prefWidth="74.0" text=" Sub Topic: " textFill="WHITE">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txtQuestionText" layoutX="80.0" layoutY="107.0" prefHeight="92.0" prefWidth="293.0" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Label depthTest="DISABLE" layoutX="23.0" layoutY="14.0" prefHeight="27.0" prefWidth="58.0" text=" Topic: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <TextField id="txtTopic" fx:id="txtTopic" layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="293.0" />
+                        <Label depthTest="DISABLE" layoutX="23.0" layoutY="111.0" prefHeight="27.0" prefWidth="74.0" text=" Qn: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <TextField fx:id="txtSubTopic" layoutX="85.0" layoutY="58.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="txtAnswerA" layoutX="85.0" layoutY="217.0" prefHeight="25.0" prefWidth="293.0" />
+                        <Label fx:id="lblQuestionNumber" depthTest="DISABLE" layoutX="27.0" layoutY="144.0" prefHeight="27.0" prefWidth="50.0" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <TextField fx:id="txtAnswerB" layoutX="84.0" layoutY="265.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="txtAnswerC" layoutX="85.0" layoutY="311.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="txtAnswerD" layoutX="85.0" layoutY="357.0" prefHeight="25.0" prefWidth="293.0" />
+                        <TextField fx:id="txtAnswerE" layoutX="84.0" layoutY="401.0" prefHeight="25.0" prefWidth="293.0" />
+                        <Label depthTest="DISABLE" layoutX="21.0" layoutY="217.0" text=" A: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label depthTest="DISABLE" layoutX="21.0" layoutY="266.0" text=" B: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label depthTest="DISABLE" layoutX="21.0" layoutY="311.0" text=" C: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label depthTest="DISABLE" layoutX="21.0" layoutY="358.0" text=" D: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label depthTest="DISABLE" layoutX="21.0" layoutY="402.0" text=" E: " textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button layoutX="25.0" layoutY="585.0" mnemonicParsing="false" onAction="#handleCloseAction_2" prefHeight="40.0" prefWidth="242.0" style="-fx-background-color: #2C64B6;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="25.0" layoutY="636.0" prefHeight="40.0" prefWidth="906.0" style="-fx-background-color: #00569C;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="906.0" text="Linked List" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="21.0" layoutY="770.0" prefHeight="40.0" prefWidth="914.0" style="-fx-background-color: #00569C;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="1.0" prefHeight="40.0" prefWidth="913.0" text="Binary Tree">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="linkedListTArea" editable="false" layoutX="1.0" layoutY="-92.0" prefHeight="77.0" prefWidth="906.0" wrapText="true" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="btnExit_2" layoutX="698.0" layoutY="941.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="236.0" style="-fx-background-color: #2C64B6;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="displayTreeBtn" layoutX="698.0" layoutY="898.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="236.0" style="-fx-background-color: #2C64B6;" text="Display" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="displayPostOrderBtn" layoutX="470.0" layoutY="940.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #2C64B6;" text="Display" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="displayInOrderBtn" layoutX="244.0" layoutY="940.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #2C64B6;" text="Display" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="displayPreOrderBtn" layoutX="21.0" layoutY="940.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="213.0" style="-fx-background-color: #2C64B6;" text="Display" textFill="WHITE">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="20.0" layoutY="899.0" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #00569C;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-6.0" layoutY="-8.0" prefHeight="49.0" prefWidth="227.0" text="Pre - Order" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="244.0" layoutY="899.0" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #00569C;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="214.0" text="In - Order" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="470.0" layoutY="899.0" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #00569C;" />
+                  <Label alignment="CENTER" layoutX="470.0" layoutY="899.0" prefHeight="34.0" prefWidth="214.0" text="Post - Order">
+                     <font>
+                        <Font name="Source Sans Pro" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="752.0" prefHeight="91.0" prefWidth="207.0">
+                     <children>
+                        <Button fx:id="btnExit" layoutX="152.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleCloseAction" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: #163864;" text="X" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMinimise" layoutX="104.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleMinimiseAction" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: #163864;" text="_" textFill="WHITE">
+                           <font>
+                              <Font name="Source Sans Pro" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btnLoadTableData" layoutX="374.0" layoutY="109.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #2C64B6;" text="Load Table Data" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnOpenFile" layoutX="423.0" layoutY="532.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #2C64B6; -fx-font-size: 1.3em;" text="Open File" textFill="WHITE" />
+                  <TextArea fx:id="treeTArea" layoutX="20.0" layoutY="811.0" prefHeight="78.0" prefWidth="915.0" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblMessage" alignment="TOP_LEFT" minHeight="-Infinity" prefHeight="24.0" prefWidth="936.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+
+    <!-- <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/> -->
+</VBox>

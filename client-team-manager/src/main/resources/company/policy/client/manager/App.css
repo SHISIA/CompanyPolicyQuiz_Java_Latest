@@ -1,0 +1,19 @@
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(SourceSansPro-Regular.ttf);
+}
+
+.root {
+    -fx-base: #163864;
+    -fx-font-family: 'Source Sans Pro';
+}
+
+.text-area .scroll-pane .viewport .content,
+.text-field {
+    -fx-background-color: white;
+}
+
+.label .text {
+    -fx-fill: white;
+}
